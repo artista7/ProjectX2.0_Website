@@ -1,0 +1,30 @@
+﻿@model IPagedList<Project_X_2._0.Models.Place>
+
+@{
+    ViewBag.Title = "TestPage";
+}
+
+<h2>Test Page</h2>
+
+<p>Trips</p>
+
+<form method="get" action="@Url.Action("Index")"
+      data-projectX-ajax="true" data-projectX-target="#PlacesList">
+    <input type="search" name="searchTerm" data-projectX-autoComplete="@Url.Action("AutoComplete")"/>  @*attaching source attribute to this DOM element for autocomplete*@
+    <input type="submit" value="Search By Name" />
+</form>
+
+@*@using (Ajax.BeginForm(
+                    new AjaxOptions
+                    {
+                        HttpMethod = "get",
+                        InsertionMode = InsertionMode.Replace,
+                        UpdateTargetId = "PlacesList"
+                    }))
+    {
+        <input type="search" name="searchTerm" />
+        <input type="submit" value="Search By Name" />
+    }*@
+
+@Html.Partial("_PlacesList", Model)
+

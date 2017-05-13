@@ -1,0 +1,38 @@
+﻿@model IPagedList<Project_X_2._0.Models.Place>
+<div id="PlacesList">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Model => Model.FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.FirstOrDefault().State)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.PlaceID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.PlaceID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.PlaceID })
+            </td>
+        </tr>
+    }
+    </table>
+
+    <div class="pagedList" data-projectX-target="#PlacesList">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),
+        PagedListRenderOptions.MinimalWithPageCountText)
+    </div>
+</div>

@@ -1,0 +1,15 @@
+Git Commands
+	Git init
+1.	Git status
+2.	Adding all the changes :			git add –A
+3.	Committing changes locally :		git commit –m “Comment”
+4.	Adding remote :				git remote add origin link
+5.	Pushing changes to remote server :		git push –u origin master
+6.	Local Branch vs Remote Branch Tracking :	git remote show origin
+7.	Creating a new branch :			git checkout –b <new branch name>
+8.	Pulling files from remote server :		git pull origin master
+9.	Pushing new branch on remote : 		git push –u origin <new branch name>
+10.	Change branch 				git checkout <branch>
+
+11. 	Deleteing Branches locally and remotely	Local : git branch -d <branch_name>
+						Remote:	git push origin --delete <branch_name>

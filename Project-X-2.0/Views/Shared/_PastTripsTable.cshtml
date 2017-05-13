@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Project_X_2._0.Models.Trip>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Place.Name)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelitem => item.Place.Name)
+            </td>
+            
+            <td>
+                @Html.ActionLink("Reviews", "Index", "Reviews", new { id = item.TripID }, null) |
+                @Html.ActionLink("Details", "Details", "Trips", new { id = item.TripID }, null)
+            </td>
+        </tr>
+        }
+    </table>
+
+
