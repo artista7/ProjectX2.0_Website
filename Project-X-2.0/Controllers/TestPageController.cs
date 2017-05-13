@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 
 namespace Project_X_2._0.Controllers
 {
@@ -13,6 +14,11 @@ namespace Project_X_2._0.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+
+        //output stored in memoryfor 20 mins
+        //Dont expect the places to be added in db too frequently
+        //VaryByHeader added to prevent ajax caxhed file to load while doing http request
+        [OutputCache(CacheProfile="Long", VaryByHeader="X-Requested-With, Accept-Language", Location=OutputCacheLocation.Server)] 
         // GET: TestPage
         public ActionResult Index(string searchTerm = null, int page = 1)
         {
@@ -29,6 +35,7 @@ namespace Project_X_2._0.Controllers
             return View(places);
         }
 
+        [OutputCache(CacheProfile="Medium")]  //output stored in memoryfor 20 mins - dont expect the places to be added in db too frequently
         // GET: AutoComplete
         public ActionResult AutoComplete(string term)
         {

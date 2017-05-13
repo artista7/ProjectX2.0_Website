@@ -26,5 +26,18 @@
         <input type="submit" value="Search By Name" />
     }*@
 
+@{ 
+    var amount = 10.0m;
+    var date = new DateTime(2017, 01, 31);
+}
+
+<div>
+    @amount.ToString("c");
+</div>
+<div>
+    @date.ToShortDateString();
+    @*@Project_X_2._0.Views.TestPage.Resource.Greetings*@
+</div>
+
 @Html.Partial("_PlacesList", Model)
 
