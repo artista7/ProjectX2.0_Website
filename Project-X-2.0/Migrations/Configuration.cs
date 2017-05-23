@@ -37,7 +37,8 @@ namespace Project_X_2._0.Migrations
                                         new Place { PlaceID = 18, Name = "Agra" },
                                         new Place { PlaceID = 19, Name = "McLeodganj" },
                                         new Place { PlaceID = 20, Name = "Ajmer" },
-                                        new Place { PlaceID = 21, Name = "Latur" });
+                                        new Place { PlaceID = 21, Name = "Latur" },
+                                        new Place { PlaceID = 22, Name = "Malvan" });
             context.Trips.AddOrUpdate(new Trip
             {
                 TripID=1,

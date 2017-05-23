@@ -17,5 +17,6 @@ namespace Project_X_2._0.Models
 
         public DbSet<Trip> Trips { get; set; }
         public DbSet<Place> Places { get; set; }
+        public DbSet<Embarks> Embarks { get; set; }
     }
 }

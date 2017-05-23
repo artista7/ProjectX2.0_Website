@@ -18,7 +18,7 @@ namespace Project_X_2._0.Controllers
         //output stored in memoryfor 20 mins
         //Dont expect the places to be added in db too frequently
         //VaryByHeader added to prevent ajax caxhed file to load while doing http request
-        [OutputCache(CacheProfile="Long", VaryByHeader="X-Requested-With, Accept-Language", Location=OutputCacheLocation.Server)] 
+        [OutputCache(CacheProfile="Short", VaryByHeader="X-Requested-With, Accept-Language", Location=OutputCacheLocation.Server)] 
         // GET: TestPage
         public ActionResult Index(string searchTerm = null, int page = 1)
         {

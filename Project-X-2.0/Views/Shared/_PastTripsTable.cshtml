@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Project_X_2._0.Models.Trip>
+﻿@using Project_X_2._0.Models.ExtensionMethods;
+@model IEnumerable<Project_X_2._0.Models.Trip>
 
 
     <table class="table">
@@ -16,6 +17,7 @@
             </td>
             
             <td>
+                @*@Html.ActionLinkIfInRole("Admin", "Reviews", "Index", "Reviews", new { id = item.TripID }, null); |*@
                 @Html.ActionLink("Reviews", "Index", "Reviews", new { id = item.TripID }, null) |
                 @Html.ActionLink("Details", "Details", "Trips", new { id = item.TripID }, null)
             </td>

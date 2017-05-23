@@ -152,3 +152,5 @@ C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0.Tests\bin\Debu
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0.Tests\obj\Debug\Project-X-2.0.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0.Tests\obj\Debug\Project-X-2.0.Tests.dll
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0.Tests\obj\Debug\Project-X-2.0.Tests.pdb
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0.Tests\bin\Debug\fr\Project-X-2.0.resources.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0.Tests\bin\Debug\hi\Project-X-2.0.resources.dll

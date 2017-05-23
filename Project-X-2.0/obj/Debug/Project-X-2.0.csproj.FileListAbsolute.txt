@@ -202,3 +202,12 @@ C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\Proj
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\Project-X-2.0.csproj.GenerateResource.Cache
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\Project-X-2.0.dll
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\Project-X-2.0.pdb
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\fr\Project-X-2.0.resources.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\hi\Project-X-2.0.resources.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Elmah.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Elmah.Mvc.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\Project_X_2._0.Views.TestPage.Resource.resources
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\Project_X_2._0.Views.TestPage.Resource.fr.resources
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\Project_X_2._0.Views.TestPage.Resource.hi.resources
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\fr\Project-X-2.0.resources.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\hi\Project-X-2.0.resources.dll
