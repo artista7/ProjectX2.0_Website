@@ -18,12 +18,6 @@ namespace Project_X_2._0
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-
-            routes.MapRoute(
-                name: "Roles",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Role", action = "Index", id = UrlParameter.Optional }
-            );
         }
     }
 }

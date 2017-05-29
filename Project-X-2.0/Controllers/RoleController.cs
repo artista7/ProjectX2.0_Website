@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Project_X_2._0.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class RoleController : Controller
     {
         ApplicationDbContext context;
@@ -32,7 +33,6 @@ namespace Project_X_2._0.Controllers
         /// Create  a New role
         /// </summary>
         /// <returns></returns>
-        [AuthLog(Roles = "Admin")]
         public ActionResult Create()
         {
             var Role = new IdentityRole();
@@ -44,7 +44,6 @@ namespace Project_X_2._0.Controllers
         /// </summary>
         /// <param name="Role"></param>
         /// <returns></returns>
-        [AuthLog(Roles = "Admin")]
         [HttpPost]
         public ActionResult Create(IdentityRole Role)
         {

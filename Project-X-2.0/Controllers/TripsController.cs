@@ -11,6 +11,7 @@ using Project_X_2._0.CustomFilters;
 
 namespace Project_X_2._0.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class TripsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -40,7 +41,6 @@ namespace Project_X_2._0.Controllers
         }
 
         // GET: Trips/Create
-        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             ViewBag.PlaceID = new SelectList(db.Places, "PlaceID", "Name");
@@ -50,7 +50,6 @@ namespace Project_X_2._0.Controllers
         // POST: Trips/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "TripID,Date,CostPerHead,PlaceID")] Trip trip)
@@ -67,7 +66,6 @@ namespace Project_X_2._0.Controllers
         }
 
         // GET: Trips/Edit/5
-        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -86,7 +84,6 @@ namespace Project_X_2._0.Controllers
         // POST: Trips/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "TripID,Date,CostPerHead,PlaceID")] Trip trip)
@@ -102,7 +99,6 @@ namespace Project_X_2._0.Controllers
         }
 
         // GET: Trips/Delete/5
-        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -118,7 +114,6 @@ namespace Project_X_2._0.Controllers
         }
 
         // POST: Trips/Delete/5
-        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

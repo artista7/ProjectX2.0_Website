@@ -1,7 +1,8 @@
-﻿@model IPagedList<Project_X_2._0.Models.Place>
+﻿@using Project_X_2._0.Models.ExtensionMethods;
+@model IPagedList<Project_X_2._0.Models.Place>
 <div id="PlacesList">
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Create New", "Create").If(User.IsInRole("Admin"))     @*Not implemented yet*@
     </p>
     <table class="table">
         <tr>
@@ -23,9 +24,9 @@
                 @Html.DisplayFor(modelItem => item.State)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.PlaceID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.PlaceID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.PlaceID })
+                @Html.ActionLink("Edit |", "Edit", new { id=item.PlaceID }).If(User.IsInRole("Admin"))  @*Not implemented yet*@
+                @Html.ActionLink("Details", "Details", new { id=item.PlaceID }) @*Not implemented yet*@
+                @Html.ActionLink("| Delete", "Delete", new { id=item.PlaceID }).If(User.IsInRole("Admin"))  @*Not implemented yet*@
             </td>
         </tr>
     }
