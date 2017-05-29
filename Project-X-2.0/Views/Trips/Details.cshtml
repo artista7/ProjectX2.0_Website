@@ -1,4 +1,6 @@
-﻿@model Project_X_2._0.Models.Trip
+﻿@using Project_X_2._0.Models.ExtensionMethods;
+@model Project_X_2._0.Models.Trip
+
 
 @{
     ViewBag.Title = "Details";
@@ -37,6 +39,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TripID }) |
+    @Html.ActionLink("Edit |", "Edit", new { id = Model.TripID }).If(User.IsInRole("Admin"))
     @Html.ActionLink("Back to List", "Index")
 </p>
