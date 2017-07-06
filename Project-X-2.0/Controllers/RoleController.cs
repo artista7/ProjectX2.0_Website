@@ -12,11 +12,11 @@ namespace Project_X_2._0.Controllers
     [Authorize(Roles = "Admin")]
     public class RoleController : Controller
     {
-        ApplicationDbContext context;
+        ApplicationDbContext db;
 
         public RoleController()
         {
-            context = new ApplicationDbContext();
+            db = new ApplicationDbContext();
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace Project_X_2._0.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
-            var Roles = context.Roles.ToList();
+            var Roles = db.Roles.ToList();
             return View(Roles);
         }
 
@@ -47,10 +47,18 @@ namespace Project_X_2._0.Controllers
         [HttpPost]
         public ActionResult Create(IdentityRole Role)
         {
-            context.Roles.Add(Role);
-            context.SaveChanges();
+            db.Roles.Add(Role);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            if (db != null)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
     }
 }

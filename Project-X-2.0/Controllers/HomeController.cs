@@ -10,11 +10,20 @@ namespace Project_X_2._0.Controllers
     [AllowAnonymous]
     public class HomeController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private IApplicationDbContext db;
+        public HomeController()
+        {
+            db = new ApplicationDbContext();
+        }
+
+        public HomeController(IApplicationDbContext _db)
+        {
+            db = _db;
+        }
 
         public ActionResult Index()
         {
-            var trips = db.Trips.ToList();
+            var trips = db.Query<Trip>().ToList();
             return View((from t in trips
                         orderby t.Date ascending
                         select t).Take(5));
@@ -34,13 +43,13 @@ namespace Project_X_2._0.Controllers
             return View();
         }
 
-        /*protected override void Dispose(bool disposing)
+        protected override void Dispose(bool disposing)
         {
             if (db!=null)
             {
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }*/
+        }
     }
 }

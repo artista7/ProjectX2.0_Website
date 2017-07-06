@@ -13,5 +13,19 @@ namespace Project_X_2._0.Models
         public int PlaceID { get; set; }
 
         public virtual Place Place { get; set; }
+
+        /*public override int GetHashCode()
+        {
+            return this.TripID.GetHashCode()*CostPerHead.GetHashCode()*Date.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            if(obj==null || this == null)
+            {
+                return false;
+            }
+            return this.GetHashCode() == obj.GetHashCode();
+        }*/
     }
 }

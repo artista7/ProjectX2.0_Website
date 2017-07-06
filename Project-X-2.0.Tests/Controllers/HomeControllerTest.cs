@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Project_X_2._0;
 using Project_X_2._0.Controllers;
 
-namespace Project_X_2._0.Tests.Controllers
+namespace Project_X_2._0.Tests
 {
     [TestClass]
     public class HomeControllerTest
@@ -16,7 +16,9 @@ namespace Project_X_2._0.Tests.Controllers
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            var db = new FakeApplicationDbContext();
+            db.AddSet(TestData.Trips);
+            HomeController controller = new HomeController(db);
 
             // Act
             ViewResult result = controller.Index() as ViewResult;

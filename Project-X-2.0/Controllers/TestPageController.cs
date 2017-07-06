@@ -46,5 +46,14 @@ namespace Project_X_2._0.Controllers
 
             return Json(places, JsonRequestBehavior.AllowGet);
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (db != null)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
     }
 }

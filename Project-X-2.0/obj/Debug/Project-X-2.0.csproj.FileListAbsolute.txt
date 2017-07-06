@@ -211,3 +211,12 @@ C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\Proj
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\Project_X_2._0.Views.TestPage.Resource.hi.resources
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\fr\Project-X-2.0.resources.dll
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\hi\Project-X-2.0.resources.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\System.ValueTuple.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\System.ValueTuple.xml

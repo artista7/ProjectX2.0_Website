@@ -17,6 +17,7 @@ namespace Project_X_2._0.Models
         //public byte? FunFB { get; set; }
         public byte? FoodFB { get; set; }
         public byte? OverallFB { get; set; }
+        public string OneLiner { get; set; }
 
         public virtual Trip Trip { get; set; }
         [ForeignKey("UserID")]
