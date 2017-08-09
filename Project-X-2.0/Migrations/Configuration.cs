@@ -10,7 +10,7 @@ namespace Project_X_2._0.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
             //AutomaticMigrationDataLossAllowed = true;
             ContextKey = "Project_X_2._0.Models.ApplicationDbContext";
         }
@@ -41,11 +41,19 @@ namespace Project_X_2._0.Migrations
                                         new Place { PlaceID = 22, Name = "Malvan" });
             context.Trips.AddOrUpdate(new Trip
             {
-                TripID=1,
+                TripID = 1,
                 PlaceID = 1,
                 CostPerHead = 2500,
                 Date = new DateTime(2017, 02, 11)
-            });
+            },
+            new Trip
+            {
+                TripID = 2,
+                PlaceID = 1,
+                CostPerHead = 1600,
+                Date = new DateTime(2017, 05, 11)
+            }
+            );
 
             //  This method will be called after migrating to the latest version.
 

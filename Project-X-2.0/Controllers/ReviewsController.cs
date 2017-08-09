@@ -23,7 +23,7 @@ namespace Project_X_2._0.Controllers
             //var reviews = db.Embarks.Find(id);
             //if (reviews == null)
             {
-                return HttpNotFound();
+                //return HttpNotFound();
             }
             return View();
         }

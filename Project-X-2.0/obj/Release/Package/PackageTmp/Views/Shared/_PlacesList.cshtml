@@ -1,0 +1,39 @@
+﻿@using Project_X_2._0.Models.ExtensionMethods;
+@model IPagedList<Project_X_2._0.Models.Place>
+<div id="PlacesList">
+    <p>
+        @Html.ActionLink("Create New", "Create").If(User.IsInRole("Admin"))     @*Not implemented yet*@
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Model => Model.FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.FirstOrDefault().State)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.ActionLink("Edit |", "Edit", new { id=item.PlaceID }).If(User.IsInRole("Admin"))  @*Not implemented yet*@
+                @Html.ActionLink("Details", "Details", new { id=item.PlaceID }) @*Not implemented yet*@
+                @Html.ActionLink("| Delete", "Delete", new { id=item.PlaceID }).If(User.IsInRole("Admin"))  @*Not implemented yet*@
+            </td>
+        </tr>
+    }
+    </table>
+
+    <div class="pagedList" data-projectX-target="#PlacesList">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),
+        PagedListRenderOptions.MinimalWithPageCountText)
+    </div>
+</div>
