@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Project_X_2._0.Models
+namespace Project_X_2._0.Entities
 {
     public class ExternalLoginConfirmationViewModel
     {

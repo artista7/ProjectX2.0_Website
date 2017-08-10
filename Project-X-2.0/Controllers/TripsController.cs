@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Project_X_2._0.Models;
+using Project_X_2._0.Entities;
 using Project_X_2._0.CustomFilters;
 
 namespace Project_X_2._0.Controllers

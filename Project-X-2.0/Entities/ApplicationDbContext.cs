@@ -3,7 +3,7 @@ using System;
 using System.Data.Entity;
 using System.Linq;
 
-namespace Project_X_2._0.Models
+namespace Project_X_2._0.Entities
 {
     public interface IApplicationDbContext : IDisposable
     {

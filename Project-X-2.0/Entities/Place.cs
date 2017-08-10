@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Project_X_2._0.Models
+namespace Project_X_2._0.Entities
 {
     public class Place
     {

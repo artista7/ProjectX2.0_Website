@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Project_X_2._0.Models;
+using Project_X_2._0.Entities;
 using System.Linq;
 
 namespace Project_X_2._0.Tests.Features

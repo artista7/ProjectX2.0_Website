@@ -119,3 +119,10 @@ C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Release\Pr
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Elmah.dll
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Elmah.Mvc.dll
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Release\Project_X_2._0.Migrations.updatedOne.resources
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.Web.Common.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.Web.Mvc.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\WebActivatorEx.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.xml
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.Web.Common.xml
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.Web.Mvc.xml

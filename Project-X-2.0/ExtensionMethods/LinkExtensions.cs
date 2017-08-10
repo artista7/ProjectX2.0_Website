@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 
-namespace Project_X_2._0.Models.ExtensionMethods
+namespace Project_X_2._0.ExtensionMethods
 {
     public static class LinkExtensions
     {

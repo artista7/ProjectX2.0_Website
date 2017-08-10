@@ -7,7 +7,7 @@ using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.Facebook;
 using Owin;
 using System.Security.Claims;
-using Project_X_2._0.Models;
+using Project_X_2._0.Entities;
 using System.Threading.Tasks;
 
 namespace Project_X_2._0

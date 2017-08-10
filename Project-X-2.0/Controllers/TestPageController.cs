@@ -1,5 +1,5 @@
 ﻿using PagedList;
-using Project_X_2._0.Models;
+using Project_X_2._0.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

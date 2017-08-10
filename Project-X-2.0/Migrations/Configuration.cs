@@ -1,18 +1,18 @@
 namespace Project_X_2._0.Migrations
 {
-    using Project_X_2._0.Models;
+    using Project_X_2._0.Entities;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Project_X_2._0.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Project_X_2._0.Entities.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
             //AutomaticMigrationDataLossAllowed = true;
-            ContextKey = "Project_X_2._0.Models.ApplicationDbContext";
+            ContextKey = "Project_X_2._0.Entities.ApplicationDbContext";
         }
 
         protected override void Seed(ApplicationDbContext context)

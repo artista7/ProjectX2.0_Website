@@ -1,4 +1,5 @@
-﻿using Project_X_2._0.Models;
+﻿using Project_X_2._0.Entities;
+using Project_X_2._0.Persistance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,20 +11,18 @@ namespace Project_X_2._0.Controllers
     [AllowAnonymous]
     public class HomeController : Controller
     {
-        private IApplicationDbContext db;
-        public HomeController()
-        {
-            db = new ApplicationDbContext();
-        }
+        private readonly ITripRepository _tripRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(IApplicationDbContext _db)
+        public HomeController(ITripRepository tripRepository, IUnitOfWork unitOfWork)
         {
-            db = _db;
+            _tripRepository = tripRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public ActionResult Index()
         {
-            var trips = db.Query<Trip>().ToList();
+            var trips = _tripRepository.GetAll();
             return View((from t in trips
                         orderby t.Date ascending
                         select t).Take(5));
@@ -45,10 +44,7 @@ namespace Project_X_2._0.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            if (db!=null)
-            {
-                db.Dispose();
-            }
+            _unitOfWork.Dispose();
             base.Dispose(disposing);
         }
     }

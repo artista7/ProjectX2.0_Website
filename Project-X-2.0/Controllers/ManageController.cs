@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Project_X_2._0.Models;
+using Project_X_2._0.Entities;
 
 namespace Project_X_2._0.Controllers
 {
