@@ -1,4 +1,5 @@
 ﻿using Project_X_2._0.Entities;
+using Project_X_2._0.Persistance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,15 @@ namespace Project_X_2._0.Controllers
     [Authorize(Roles = "Admin")]
     public class ReviewsController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IUserTripDetailsRepository _userTripDetailsRepository;
+
+        public ReviewsController(IUnitOfWork unitOfWork, IUserTripDetailsRepository userTripDetailsRepository)
+        {
+            _unitOfWork = unitOfWork;
+            _userTripDetailsRepository = userTripDetailsRepository;
+        }
+
 
         [AllowAnonymous]
         // GET: Reviews
@@ -20,7 +29,7 @@ namespace Project_X_2._0.Controllers
             {
                 //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //var reviews = db.Embarks.Find(id);
+            //var reviews = _userTripDetailsRepository.GetAll();
             //if (reviews == null)
             {
                 //return HttpNotFound();
@@ -103,10 +112,7 @@ namespace Project_X_2._0.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            if (db != null)
-            {
-                db.Dispose();
-            }
+            _unitOfWork.Dispose();
             base.Dispose(disposing);
         }
     }

@@ -68,6 +68,8 @@ namespace Project_X_2._0.App_Start
             kernel.Bind<DbContext>().To<ApplicationDbContext>();
             kernel.Bind(typeof(IUnitOfWork)).To(typeof(UnitOfWork));
             kernel.Bind(typeof(ITripRepository)).To(typeof(TripRepository));
+            kernel.Bind(typeof(IUserTripDetailsRepository)).To(typeof(UserTripDetailsRepository));
+            kernel.Bind(typeof(IPlaceRepository)).To(typeof(PlaceRepository));
         }        
     }
 }

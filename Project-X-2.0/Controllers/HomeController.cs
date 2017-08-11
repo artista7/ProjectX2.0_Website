@@ -14,7 +14,7 @@ namespace Project_X_2._0.Controllers
         private readonly ITripRepository _tripRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(ITripRepository tripRepository, IUnitOfWork unitOfWork)
+        public HomeController(IUnitOfWork unitOfWork, ITripRepository tripRepository)
         {
             _tripRepository = tripRepository;
             _unitOfWork = unitOfWork;

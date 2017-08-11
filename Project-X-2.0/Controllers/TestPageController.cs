@@ -1,5 +1,6 @@
 ﻿using PagedList;
 using Project_X_2._0.Entities;
+using Project_X_2._0.Persistance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,14 @@ namespace Project_X_2._0.Controllers
     [AllowAnonymous]
     public class TestPageController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IPlaceRepository _placeRepository;
 
+        public TestPageController(IUnitOfWork unitOfWork, IPlaceRepository placeRepository)
+        {
+            _unitOfWork = unitOfWork;
+            _placeRepository = placeRepository;
+        }
 
         //output stored in memoryfor 20 mins
         //Dont expect the places to be added in db too frequently
@@ -22,7 +29,7 @@ namespace Project_X_2._0.Controllers
         // GET: TestPage
         public ActionResult Index(string searchTerm = null, int page = 1)
         {
-            var places = db.Places
+            var places = _placeRepository.GetAll()
                 .Where(p => searchTerm == null || p.Name.Contains(searchTerm))
                 .OrderBy(p => p.Name)
                 .ToPagedList(page, 5);
@@ -39,7 +46,7 @@ namespace Project_X_2._0.Controllers
         // GET: AutoComplete
         public ActionResult AutoComplete(string term)
         {
-            var places = db.Places
+            var places = _placeRepository.GetAll()
                 .Where(p => term == null || p.Name.Contains(term))
                 .OrderBy(p => p.Name)
                 .Select(r => new { label = r.Name });
@@ -49,10 +56,7 @@ namespace Project_X_2._0.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            if (db != null)
-            {
-                db.Dispose();
-            }
+            _unitOfWork.Dispose();
             base.Dispose(disposing);
         }
     }

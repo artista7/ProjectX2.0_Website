@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 using Project_X_2._0.CustomFilters;
 using Project_X_2._0.Entities;
+using Project_X_2._0.Persistance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace Project_X_2._0.Controllers
     {
         ApplicationDbContext db;
 
-        public RoleController()
+        public RoleController(IUnitOfWork unitOfWork)
         {
             db = new ApplicationDbContext();
         }

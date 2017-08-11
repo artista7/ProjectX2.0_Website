@@ -234,25 +234,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201707090816502_InitialCreate.cs" />
-    <Compile Include="Migrations\201707090816502_InitialCreate.Designer.cs">
-      <DependentUpon>201707090816502_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201707220947001_updatedOne.cs" />
-    <Compile Include="Migrations\201707220947001_updatedOne.Designer.cs">
-      <DependentUpon>201707220947001_updatedOne.cs</DependentUpon>
+    <Compile Include="Migrations\201708111927118_updatedEmbarks.cs" />
+    <Compile Include="Migrations\201708111927118_updatedEmbarks.Designer.cs">
+      <DependentUpon>201708111927118_updatedEmbarks.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Entities\AccountViewModels.cs" />
     <Compile Include="Entities\ApplicationDbContext.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
-    <Compile Include="Entities\Embarks.cs" />
+    <Compile Include="Entities\UserTripDetail.cs" />
     <Compile Include="ExtensionMethods\LinkExtensions.cs" />
     <Compile Include="Entities\ManageViewModels.cs" />
     <Compile Include="Entities\Place.cs" />
     <Compile Include="Entities\Trip.cs" />
     <Compile Include="Persistance\ApllicationUserRepository.cs" />
-    <Compile Include="Persistance\EmbarksRepository.cs" />
+    <Compile Include="Persistance\UserTripDetailsRepository.cs" />
     <Compile Include="Persistance\IUnitOfWork.cs" />
     <Compile Include="Persistance\IRepository.cs" />
     <Compile Include="Persistance\PlaceRepository.cs" />
@@ -405,11 +401,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201707090816502_InitialCreate.resx">
-      <DependentUpon>201707090816502_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707220947001_updatedOne.resx">
-      <DependentUpon>201707220947001_updatedOne.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708111927118_updatedEmbarks.resx">
+      <DependentUpon>201708111927118_updatedEmbarks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TestPage\Resource.fr.resx" />
     <EmbeddedResource Include="Views\TestPage\Resource.hi.resx" />
