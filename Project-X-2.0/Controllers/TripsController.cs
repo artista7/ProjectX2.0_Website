@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using Project_X_2._0.Entities;
 using Project_X_2._0.CustomFilters;
 using Project_X_2._0.Persistance;
+using System.IO;
 
 namespace Project_X_2._0.Controllers
 {
@@ -19,12 +20,14 @@ namespace Project_X_2._0.Controllers
         private readonly ITripRepository _tripRepository;
         private readonly IPlaceRepository _placeRepository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly ITripPictureRepository _tripPictureRepository;
 
-        public TripsController(IUnitOfWork unitOfWork, ITripRepository tripRepository, IPlaceRepository placeRepository)
+        public TripsController(IUnitOfWork unitOfWork, ITripRepository tripRepository, IPlaceRepository placeRepository, ITripPictureRepository tripPictureRepository)
         {
             _unitOfWork = unitOfWork;
             _tripRepository = tripRepository;
             _placeRepository = placeRepository;
+            _tripPictureRepository = tripPictureRepository;
         }
 
         [AllowAnonymous]
@@ -75,6 +78,28 @@ namespace Project_X_2._0.Controllers
             ViewBag.PlaceID = new SelectList(_placeRepository.GetAll(), "PlaceID", "Name", trip.PlaceID);
             return View(trip);
         }
+        
+        // GET: Trips/AddImage
+        public ActionResult AddImage()
+        {
+            //ViewBag.PlaceID = new SelectList(_placeRepository.GetAll(), "PlaceID", "Name");
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddImage(TripPicture model)
+        {
+            HttpPostedFileBase file = Request.Files["ImageData"];
+            /*ContentRepository service = new ContentRepository();
+            int i = service.UploadImageInDataBase(file, model);
+            if (i == 1)
+            {
+                return RedirectToAction("Index");
+            }*/
+            this.UploadImageInDataBase(file, model);
+            return View(model);
+        }
 
         // GET: Trips/Edit/5
         public ActionResult Edit(int id)
@@ -123,6 +148,27 @@ namespace Project_X_2._0.Controllers
         {
             _unitOfWork.Dispose();
             base.Dispose(disposing);
+        }
+
+        public void UploadImageInDataBase(HttpPostedFileBase file, TripPicture contentViewModel)
+        {
+            contentViewModel.Image = ConvertToBytes(file);
+            var Content = new TripPicture
+            {
+                Title = contentViewModel.Title,
+                Description = contentViewModel.Description,
+                Contents = contentViewModel.Contents,
+                Image = contentViewModel.Image
+            };
+            _tripPictureRepository.Add(Content);
+            _unitOfWork.Commit();
+        }
+        public byte[] ConvertToBytes(HttpPostedFileBase image)
+        {
+            byte[] imageBytes = null;
+            BinaryReader reader = new BinaryReader(image.InputStream);
+            imageBytes = reader.ReadBytes((int)image.ContentLength);
+            return imageBytes;
         }
     }
 }

@@ -229,14 +229,28 @@
     <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\TestPageController.cs" />
+    <Compile Include="Controllers\TripPicturesController.cs" />
     <Compile Include="Controllers\TripsController.cs" />
     <Compile Include="CustomFilters\AuthLogAttribute.cs" />
+    <Compile Include="Entities\TripPicture.cs" />
+    <Compile Include="FakeRepository\FakeApplicationUserRepository.cs" />
+    <Compile Include="FakeRepository\FakePlaceRepository.cs" />
+    <Compile Include="FakeRepository\FakeTripRepository.cs" />
+    <Compile Include="FakeRepository\FakeUserTripDetailsRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201708111927118_updatedEmbarks.cs" />
     <Compile Include="Migrations\201708111927118_updatedEmbarks.Designer.cs">
       <DependentUpon>201708111927118_updatedEmbarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708120740354_TripPictures.cs" />
+    <Compile Include="Migrations\201708120740354_TripPictures.Designer.cs">
+      <DependentUpon>201708120740354_TripPictures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708150256193_updatedTripPictureagain.cs" />
+    <Compile Include="Migrations\201708150256193_updatedTripPictureagain.Designer.cs">
+      <DependentUpon>201708150256193_updatedTripPictureagain.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Entities\AccountViewModels.cs" />
@@ -248,6 +262,7 @@
     <Compile Include="Entities\Place.cs" />
     <Compile Include="Entities\Trip.cs" />
     <Compile Include="Persistance\ApllicationUserRepository.cs" />
+    <Compile Include="Persistance\TripPictureRepository.cs" />
     <Compile Include="Persistance\UserTripDetailsRepository.cs" />
     <Compile Include="Persistance\IUnitOfWork.cs" />
     <Compile Include="Persistance\IRepository.cs" />
@@ -389,6 +404,8 @@
     <Content Include="Views\Role\Index.cshtml" />
     <Content Include="Views\Role\Create.cshtml" />
     <Content Include="Views\Authorize\AuthorizeFailed.cshtml" />
+    <Content Include="Views\TripPictures\Create.cshtml" />
+    <Content Include="Views\Shared\_Socials.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -403,6 +420,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201708111927118_updatedEmbarks.resx">
       <DependentUpon>201708111927118_updatedEmbarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708120740354_TripPictures.resx">
+      <DependentUpon>201708120740354_TripPictures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708150256193_updatedTripPictureagain.resx">
+      <DependentUpon>201708150256193_updatedTripPictureagain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TestPage\Resource.fr.resx" />
     <EmbeddedResource Include="Views\TestPage\Resource.hi.resx" />

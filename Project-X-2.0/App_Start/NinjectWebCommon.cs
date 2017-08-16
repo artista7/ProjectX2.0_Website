@@ -65,11 +65,13 @@ namespace Project_X_2._0.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<DbContext>().To<ApplicationDbContext>();
-            kernel.Bind(typeof(IUnitOfWork)).To(typeof(UnitOfWork));
-            kernel.Bind(typeof(ITripRepository)).To(typeof(TripRepository));
-            kernel.Bind(typeof(IUserTripDetailsRepository)).To(typeof(UserTripDetailsRepository));
-            kernel.Bind(typeof(IPlaceRepository)).To(typeof(PlaceRepository));
+            kernel.Bind<DbContext>().To<ApplicationDbContext>().InRequestScope(); ;
+            //kernel.Bind(typeof(DbContext)).To(typeof(ApplicationDbContext));
+            kernel.Bind(typeof(IUnitOfWork)).To(typeof(UnitOfWork)).InRequestScope();
+            kernel.Bind(typeof(ITripRepository)).To(typeof(TripRepository)).InRequestScope();
+            kernel.Bind(typeof(IUserTripDetailsRepository)).To(typeof(UserTripDetailsRepository)).InRequestScope();
+            kernel.Bind(typeof(IPlaceRepository)).To(typeof(PlaceRepository)).InRequestScope();
+            kernel.Bind(typeof(ITripPictureRepository)).To(typeof(TripPictureRepository)).InRequestScope();
         }        
     }
 }

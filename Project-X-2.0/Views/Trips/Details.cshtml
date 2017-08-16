@@ -39,6 +39,14 @@
     </dl>
 </div>
 <p>
+    <td>
+     <img src="/TripPictures/RetrieveImage/@Html.DisplayFor(model => model.TripID)" alt="" height=100 width=200 />
+    </td>
+</p>
+<p>
+    @Html.ActionLink("Add Image", "Create", "TripPictures");
+</p>
+<p>
     @Html.ActionLink("Edit |", "Edit", new { id = Model.TripID }).If(User.IsInRole("Admin"))
     @Html.ActionLink("Back to List", "Index")
 </p>

@@ -219,3 +219,13 @@ C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Microsoft.
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\System.ValueTuple.dll
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\System.ValueTuple.xml
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.Web.Common.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.Web.Mvc.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\WebActivatorEx.dll
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.xml
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.Web.Common.xml
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.Web.Mvc.xml
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\Project_X_2._0.Migrations.updatedEmbarks.resources
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\Project_X_2._0.Migrations.TripPictures.resources
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Debug\Project_X_2._0.Migrations.updatedTripPictureagain.resources

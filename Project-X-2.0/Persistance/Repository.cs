@@ -12,11 +12,12 @@ namespace Project_X_2._0.Persistance
     {
         protected readonly DbSet<T> _dbSet;
 
-        protected Repository(DbContext context)
+        public Repository(DbContext context)
         {
             _dbSet = context.Set<T>();
         }
 
+        //Create
         public void Add(T entity)
         {
             _dbSet.Add(entity);
@@ -27,18 +28,19 @@ namespace Project_X_2._0.Persistance
             _dbSet.AddRange(entities);
         }
 
+        //Read
         public IEnumerable<T> Get(Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             string includeProperties = "")
         {
-            IQueryable <T> query = _dbSet;
+            IQueryable <T> query = _dbSet;      //Iqueryable created
             if (filter != null)
             {
-                query = query.Where(filter);
+                query = query.Where(filter);        //filter applied
             }
 
             foreach (var includeProperty in includeProperties.Split
-                (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))     // eager-loading expressions after parsing the comma-delimited list
             {
                 query = query.Include(includeProperty);
             }
@@ -62,6 +64,7 @@ namespace Project_X_2._0.Persistance
             return _dbSet.Find(id);
         }
 
+        //Delete
         public void Remove(int id)
         {
             T entity = _dbSet.Find(id);

@@ -125,3 +125,4 @@ C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.xm
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.Web.Common.xml
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\bin\Ninject.Web.Mvc.xml
 C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Release\Project_X_2._0.Migrations.updatedEmbarks.resources
+C:\Users\Shubham\Desktop\ProjectX\Tech\asp.net mvc5\Project-X-2.0\obj\Release\Project_X_2._0.Migrations.TripPictures.resources
