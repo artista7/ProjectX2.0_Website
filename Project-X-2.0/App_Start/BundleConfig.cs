@@ -35,7 +35,7 @@ namespace Project_X_2._0
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/slate.bootstrap.min.css",
                       "~/Content/themes/base/jquery-ui.css",    //needed for autocomplete
                       "~/Content/themes/base/core.css",    //needed for autocomplete
                       "~/Content/themes/base/autocomplete.css",    //needed for autocompletes

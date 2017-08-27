@@ -1,4 +1,4 @@
-﻿$(function () {
+﻿/*$(function () {
 	var submitAutoCompleteForm = function (event, ui) {
 		var $input = $(this);
 		$input.val(ui.item.label);
@@ -46,6 +46,46 @@
 	};
 	$("form[data-projectX-ajax='true']").submit(ajaxFormSubmit);	//async get request
 	$("input[data-projectX-autoComplete]").each(createAutoComplete); //AutoCompete form with autoSubmission on clicking one
-	$(".main-content").on("click", ".pagedList a", getAsyncPage);
-});
+    $(".main-content").on("click", ".pagedList a", getAsyncPage);
+
+
+    //code to hide socials and footer on landing page
+    var path = window.location.pathname;
+    var abc = path.split("/");
+    var controller = abc[1];
+    var action = abc[2];
+    if (action == "LandingPage" || controller == "") {
+        $("#socials").hide();
+        $("footer").hide();
+    }
+    /*else {
+        $("#socials").show();
+        $("footer").show();
+    }
+});*/
+
+(function () {
+    /*Script for parallax website*/
+    
+
+    // Modal Image Gallery
+    function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+    }
+
+    // Change style of navbar on scroll
+    window.onscroll = function () { myFunction() };
+    function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            navbar.className = "w3-bar" + " w3-card-2" + " w3-white" + " w3-opacity-min";
+        } else {
+            navbar.className = navbar.className.replace(" w3-card-2 w3-white w3-opacity-min", "");
+        }
+    }
+}());
+
 

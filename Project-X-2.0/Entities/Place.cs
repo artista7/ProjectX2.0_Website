@@ -14,6 +14,7 @@ namespace Project_X_2._0.Entities
         public string Religion_Culture { get; set; }
 
         public virtual ICollection<Trip> Trips { get; set; }
-        
+        public virtual ICollection<PlacePicture> PlacePictures { get; set; }
+
     }
 }

@@ -20,6 +20,11 @@ namespace Project_X_2._0.Controllers
             _unitOfWork = unitOfWork;
         }
 
+        public ActionResult LandingPage()
+        {
+            return View();
+        }
+
         public ActionResult Index()
         {
             var trips = _tripRepository.GetAll();

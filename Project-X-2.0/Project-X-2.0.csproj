@@ -232,9 +232,11 @@
     <Compile Include="Controllers\TripPicturesController.cs" />
     <Compile Include="Controllers\TripsController.cs" />
     <Compile Include="CustomFilters\AuthLogAttribute.cs" />
+    <Compile Include="Entities\PlacePicture.cs" />
     <Compile Include="Entities\TripPicture.cs" />
     <Compile Include="FakeRepository\FakeApplicationUserRepository.cs" />
     <Compile Include="FakeRepository\FakePlaceRepository.cs" />
+    <Compile Include="FakeRepository\FakeTripPictureRepository.cs" />
     <Compile Include="FakeRepository\FakeTripRepository.cs" />
     <Compile Include="FakeRepository\FakeUserTripDetailsRepository.cs" />
     <Compile Include="Global.asax.cs">
@@ -248,9 +250,9 @@
     <Compile Include="Migrations\201708120740354_TripPictures.Designer.cs">
       <DependentUpon>201708120740354_TripPictures.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708150256193_updatedTripPictureagain.cs" />
-    <Compile Include="Migrations\201708150256193_updatedTripPictureagain.Designer.cs">
-      <DependentUpon>201708150256193_updatedTripPictureagain.cs</DependentUpon>
+    <Compile Include="Migrations\201708160538092_PlacePictures.cs" />
+    <Compile Include="Migrations\201708160538092_PlacePictures.Designer.cs">
+      <DependentUpon>201708160538092_PlacePictures.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Entities\AccountViewModels.cs" />
@@ -284,6 +286,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\sandstone.bootstrap.min.css" />
+    <Content Include="Content\site2.css" />
+    <Content Include="Content\slate.bootstrap.min.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -325,6 +331,7 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\ver4-w3.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -332,13 +339,31 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Properties\PublishProfiles\BawraKafila - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\BawraKafila - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Resources\images\cover1.JPG" />
+    <Content Include="Resources\images\cover2.JPG" />
+    <Content Include="Resources\images\cover3.JPG" />
+    <Content Include="Resources\images\cover4.JPG" />
+    <Content Include="Resources\images\cover5.JPG" />
+    <Content Include="Resources\images\cover6.JPG" />
+    <Content Include="Resources\images\cover7.JPG" />
+    <Content Include="Resources\images\cover_ScreenSize.jpg" />
+    <Content Include="Resources\images\IMG_2685.JPG" />
+    <Content Include="Resources\images\pic.jpg" />
+    <Content Include="Resources\images\Ravi.jpg" />
+    <Content Include="Resources\Logo\Logo.png" />
+    <Content Include="Resources\Logo\world.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
@@ -406,6 +431,8 @@
     <Content Include="Views\Authorize\AuthorizeFailed.cshtml" />
     <Content Include="Views\TripPictures\Create.cshtml" />
     <Content Include="Views\Shared\_Socials.cshtml" />
+    <Content Include="Views\Home\LandingPage.cshtml" />
+    <Content Include="Views\Shared\_Layout_parallax.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -424,8 +451,8 @@
     <EmbeddedResource Include="Migrations\201708120740354_TripPictures.resx">
       <DependentUpon>201708120740354_TripPictures.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708150256193_updatedTripPictureagain.resx">
-      <DependentUpon>201708150256193_updatedTripPictureagain.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708160538092_PlacePictures.resx">
+      <DependentUpon>201708160538092_PlacePictures.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TestPage\Resource.fr.resx" />
     <EmbeddedResource Include="Views\TestPage\Resource.hi.resx" />

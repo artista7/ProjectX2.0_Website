@@ -27,6 +27,7 @@ namespace Project_X_2._0.Entities
         public DbSet<Place> Places { get; set; }
         public DbSet<UserTripDetail> UserTripDetails { get; set; }
         public DbSet<TripPicture> TripPictures { get; set; }
+        public DbSet<PlacePicture> PlacePictures { get; set; }
 
         IQueryable<T> IApplicationDbContext.Query<T>()
         {

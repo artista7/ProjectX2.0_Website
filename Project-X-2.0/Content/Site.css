@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    /*background: radial-gradient(ellipse at bottom, rgb(9,76,114) 0%,rgb(1,41,63) 100%);*/
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -23,77 +24,150 @@ textarea {
     max-width: 280px;
 }
 
+/*code for stars, clouds and twinkling*/
+/*@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
 
-
-/*Designs for socials*/
-#footer1 .constrain {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color:cadetblue;
+    to {
+        background-position: -10000px 5000px;
+    }
 }
 
-#footer1 .section1 {
-    text-align: center;
-    padding-top: 2em;
-    padding-bottom: 2em;
+@-webkit-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
 }
 
-#footer1 .section1 .social {
-    width: 75%;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    background-image: url(http://placehold.it/1/eee);
-    background-repeat: repeat-x;
-    background-position: calc(49%);
+@-moz-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
 }
 
-.fa-stack {
-    position: relative;
-    display: inline-block;
-    width: 2em;
-    height: 2em;
-    line-height: 2em;
-    vertical-align: middle;
+@-ms-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
 }
 
- .fa-2x {
-    font-size: 2em;
+@keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
 }
 
-.fa-stack-2x {
-    font-size: 2em;
+@-webkit-keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
 }
 
-.fa-stack-1x, .fa-stack-2x {
+@-moz-keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+@-ms-keyframes move-clouds-back {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+.stars, .twinkling, .clouds {
     position: absolute;
+    top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    text-align: center;
+    height: 100%;
+    display: block;
 }
 
-.fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.stars {
+    background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) top center;
+    /*background: linear-gradient(to right, red, yellow); 
+    z-index: -4;
 }
 
-element.style {
-    color: #3b5998;
+.twinkling {
+    background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+    z-index: -3;
+    -moz-animation: move-twink-back 200s linear infinite;
+    -ms-animation: move-twink-back 200s linear infinite;
+    -o-animation: move-twink-back 200s linear infinite;
+    -webkit-animation: move-twink-back 200s linear infinite;
+    animation: move-twink-back 200s linear infinite;
 }
 
-.fa-stack-2x {
-    font-size: 2em;
+.clouds {
+    background: transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+    z-index: -1;
+    -moz-animation: move-clouds-back 200s linear infinite;
+    -ms-animation: move-clouds-back 200s linear infinite;
+    -o-animation: move-clouds-back 200s linear infinite;
+    -webkit-animation: move-clouds-back 200s linear infinite;
+    animation: move-clouds-back 200s linear infinite;
+}*/
+
+/*code for stars, clouds and twinkling without images being loaded*/
+
+/*Designs for logo*/
+#logo img {
+    margin: auto;
+    display: block;
+    /*animation-name: rotateLogo2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;*/
 }
 
-.fa-stack-1x, .fa-stack-2x {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    text-align: center;
+@keyframes rotateLogo2 {
+    from {
+        -ms-transform: rotate(10deg); /* IE 9 */
+        -webkit-transform: rotate(10deg); /* Safari */
+        transform: rotate(10deg);
+    }
+
+    to {
+        -ms-transform: rotate(-10deg); /* IE 9 */
+        -webkit-transform: rotate(-10deg); /* Safari */
+        transform: rotate(-10deg);
+    }
+}
+
+/*styling for logo*/
+#innerSocial{
+    text-align:center;
 }
