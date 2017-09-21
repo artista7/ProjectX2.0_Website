@@ -30,7 +30,7 @@ namespace Project_X_2._0.Controllers
             var trips = _tripRepository.GetAll();
             return View((from t in trips
                         orderby t.Date ascending
-                        select t).Take(5));
+                        select t));
         }
 
         public ActionResult About()

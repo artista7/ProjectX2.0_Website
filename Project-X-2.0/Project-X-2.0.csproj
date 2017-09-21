@@ -281,6 +281,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="audio\Naruto.mp3" />
+    <Content Include="audio\requiem.mp3" />
+    <Content Include="audio\WakeMe.mp3" />
+    <Content Include="audio\WakeMeCompressed.mp3" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -347,10 +351,38 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="audio\Buddhist1.ogg" />
     <None Include="Properties\PublishProfiles\BawraKafila - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\BawraKafila - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="images\ashish.jpg" />
+    <Content Include="images\avatar.png" />
+    <Content Include="images\cover1.jpg" />
+    <Content Include="images\cover2.jpg" />
+    <Content Include="images\cover3.jpg" />
+    <Content Include="images\cover4.jpg" />
+    <Content Include="images\cover5.jpg" />
+    <Content Include="images\cover6.jpg" />
+    <Content Include="images\cover7.jpg" />
+    <Content Include="images\cover8.jpg" />
+    <Content Include="images\cover_2.JPG" />
+    <Content Include="images\cover_6 %282%29.JPG" />
+    <Content Include="images\cover_6.jpg" />
+    <Content Include="images\cover_ScreenSize.jpg" />
+    <Content Include="images\greenLake.jpg" />
+    <Content Include="images\gurudongmar.jpg" />
+    <Content Include="images\guru_dongmar.jpg" />
+    <Content Include="images\IMG_2685.JPG" />
+    <Content Include="images\LakeTsomgo.jpg" />
+    <Content Include="images\Lake_Tsomgo.jpg" />
+    <Content Include="images\Logo.png" />
+    <Content Include="images\Lo_go.png" />
+    <Content Include="images\pic.jpg" />
+    <Content Include="images\Ravi.jpg" />
+    <Content Include="images\ravi.png" />
+    <Content Include="images\rumtek.jpg" />
+    <Content Include="images\sikkim1.jpg" />
     <Content Include="Resources\images\cover1.JPG" />
     <Content Include="Resources\images\cover2.JPG" />
     <Content Include="Resources\images\cover3.JPG" />

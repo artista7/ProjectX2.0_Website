@@ -56,4 +56,7 @@ body, html {
     }
 }
 
+
+audio {
+    display: none;
 }

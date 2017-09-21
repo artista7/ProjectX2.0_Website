@@ -1,4 +1,6 @@
-﻿<!-- Navbar (sit on top) -->
+﻿@*@model IEnumerable<Project_X_2._0.Entities.Trip>*@
+<audio controls autoplay><source src="~/audio/WakeMeCompressed.mp3" type="audio/mp3"></audio>
+<!-- Navbar (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar" id="myNavbar">
         <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
@@ -35,43 +37,28 @@
 <!-- Container (Upcoming Trips Section) -->
 <div class="w3-content w3-container w3-padding-64" id="upcomingTrips">
     <h3 class="w3-center">Upcoming Trip</h3>
-    <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
+    <p class="w3-center">Harishchandra Garh via paachnai!</p>
 
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-    <div class="w3-row-padding w3-center">
-        <div class="w3-col m3">
-            <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+    <div class="w3-row-padding w3-grayscale">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="~/images/LakeTsomgo.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="LakeTsomgo">
+            <p class="w3-opacity w3-center">LakeTsomgo</p>
         </div>
-
-        <div class="w3-col m3">
-            <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="~/images/greenLake.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Green Lake">
+            <p class="w3-opacity w3-center">Green Lake</p>
         </div>
-
-        <div class="w3-col m3">
-            <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="~/images/gurudongmar.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Gurudongmar">
+            <p class="w3-opacity w3-center">Gurudongmar</p>
         </div>
-
-        <div class="w3-col m3">
-            <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="~/images/sikkim1.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Setting Sun">
+            <p class="w3-opacity w3-center">Dusk</p>
         </div>
     </div>
-
     <div class="w3-row-padding w3-center w3-section">
-        <div class="w3-col m3">
-            <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-        </div>
-
-        <div class="w3-col m3">
-            <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-        </div>
-
-        <div class="w3-col m3">
-            <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-        </div>
-
-        <div class="w3-col m3">
-            <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-        </div>
         <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
     </div>
 </div>
@@ -98,41 +85,23 @@
     <p class="w3-center"><em>Here are some of my memories from the last trip</em></p><br>
 
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-    <div class="w3-row-padding w3-center">
-        <div class="w3-col m3">
-            <img src="~/Resources/images/cover1.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+    <div class="w3-row-padding w3-grayscale">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="~/images/cover8.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bonfire">
+            <p class="w3-opacity w3-center">Bonfire with buddies</p>
         </div>
-
-        <div class="w3-col m3">
-            <img src="~/Resources/images/cover2.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="~/images/cover5.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Dusk">
+            <p class="w3-opacity w3-center">Setting Sun</p>
         </div>
-
-        <div class="w3-col m3">
-            <img src="~/Resources/images/cover3.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="~/images/cover1.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Paragliding">
+            <p class="w3-opacity w3-center">Paragliding</p>
         </div>
-
-        <div class="w3-col m3">
-            <img src="~/Resources/images/cover4.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="~/images/cover7.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Setting Sun">
+            <p class="w3-opacity w3-center">Dusk</p>
         </div>
-    </div>
-
-    <div class="w3-row-padding w3-center w3-section">
-        <div class="w3-col m3">
-            <img src="~/Resources/images/cover5.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-        </div>
-
-        <div class="w3-col m3">
-            <img src="~/Resources/images/cover6.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-        </div>
-
-        <div class="w3-col m3">
-            <img src="~/Resources/images/cover7.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-        </div>
-
-        <div class="w3-col m3">
-            <img src="~/Resources/images/cover8.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-        </div>
-        <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
     </div>
 </div>
 
@@ -144,25 +113,3 @@
         <p id="caption" class="w3-opacity w3-large"></p>
     </div>
 </div>
-
-<!--@*@model IEnumerable<Project_X_2._0.Entities.Trip>
-
-@{
-    ViewBag.Title = "Home Page";
-}
-<div id="logo">
-    <img src="~/Resources/Logo/Logo.png"/>
-</div>
-
-<div class="jumbotron">
-    <h1>Upcoming Trip</h1>
-    <p class="lead">Let's have a fun time going out for camping on the banks of Pawna!</p>
-    @Html.ActionLink("Find Out More", "Details", "Trips", new { id = Model.LastOrDefault().TripID}, null)
-</div>
-
-<p>Past Trips</p>
-@Html.Partial("_PastTripsTable", Model.Reverse().Skip(1).Reverse())
-
-<div>
-    @Html.ActionLink("TestPage", "Index", "TestPage");*@
-</div>-->
